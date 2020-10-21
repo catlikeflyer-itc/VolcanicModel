@@ -36,7 +36,7 @@ def proyectile_with_drag(v_0, theta_deg, y_0, m, D, dt, N, g = 9.81):
 
     # Posición
     x = 0
-    y = 3020
+    y = y_0
 
     x_list = [x]
     y_list = [y]

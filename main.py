@@ -1,13 +1,19 @@
 import pages.simu as simu
 import pages.cono as cono
 import pages.refe as ref
+import pages.eq as eq
+import pages.intruc as ins
+import pages.obs as obs
 import streamlit as st
 
-st.title('Modelacion volcanica')
+st.title('Modelacion volcánica')
 
 pags = {
+    "Bienvenido": ins,
     "Marco teórico": cono,
     "Simulación": simu,
+    "Ecuaciones": eq,
+    "Observaciones": obs,
     "Referencias": ref
 }
 

@@ -2,7 +2,7 @@ import streamlit as st
 from PIL import Image
 
 def cargar():    
-    st.title('Marco Teórico')
+    st.header('Marco Teórico')
     cuerpo = """
 
 En el mundo existen más de 1500 volcanes activos, que ciertamente son unas formaciones 
