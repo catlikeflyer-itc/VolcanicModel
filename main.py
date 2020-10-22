@@ -6,7 +6,8 @@ import pages.intruc as ins
 import pages.obs as obs
 import streamlit as st
 
-st.title('Modelacion volcánica')
+st.title('MOVIS')
+st.subheader("Modelación Volcánica Interactiva y Simple")
 
 pags = {
     "Bienvenido": ins,
