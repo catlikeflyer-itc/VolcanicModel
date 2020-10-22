@@ -1,9 +1,12 @@
 import streamlit as st
 import sympy as sy
+from PIL import Image
 
 def cargar():
     st.subheader("Ecuaciones")
     st.text('Trayectoria sin resistencia del aire')
+    datos = Image.open("images/Picture1.png")
+
     st.latex(r'''
     \vec{r}(t) = \big(v_{ox}t\big) \vec{i} + \big(-\frac{1}{2}gt^2+v_{oy}t+s_{oy}\big)\vec{j}
     ''')
@@ -47,4 +50,13 @@ a generar una visualización de la trayectoria del proyectil.
     """)
     st.text('6. Definir D:')
     st.latex(r"D = \frac{\rho \cdot C\cdot A}{2}")
+
+    st.subheader('Variables')
+    st.text("""
+Los datos para cada tipo de proyectil se obtuvieron mediante las investigaciones realizadas 
+por la CENAPRED y el Centro Geológico Mexicano. El rango de valores se presenta en la siguiente 
+tabla.
+""")
+    st.image(datos, use_column_width=True)
+    
 

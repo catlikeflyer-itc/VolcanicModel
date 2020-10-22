@@ -41,7 +41,7 @@ la lava, de 3,100 2,800 kg/m^2.
 def cargar():
     st.header("Simulación de un proyectil")
 
-    v_0 = st.slider("Velocidad Inicial", 100, 500 ,400)
+    v_0 = st.slider("Velocidad Inicial en m/s", 100, 500 ,400)
     theta_deg = st.slider('Angulo: ', min_value=0, max_value=90, step=1, value=45)
 
     vx = v_0*(np.cos(theta_deg))
@@ -50,7 +50,7 @@ def cargar():
     st.text(f"V. inicial x en m/s: {vx}")
     st.text(f"V. Inicial y en m/s: {vy}")
 
-    y_0 = st.slider('Altitud del volcan: ', min_value=0, max_value=7000, step=500, value=5000)
+    y_0 = st.slider('Altitud del volcan en metros: ', min_value=0, max_value=7000, step=500, value=5000)
     ticks = 1000
 
     proyectil = st.selectbox('Tipo de proyectil: ',['Ceniza','Lapilli', 'Bombas volcánicas'])
@@ -69,8 +69,9 @@ def cargar():
         r = st.slider('Radio en metros: ', min_value=0.02, max_value=0.032, step=0.002, value=0.032)
         rho = st.slider("Densidad en kg/m^3:", 2500, 2900, 2700, 50)
         m = rho*volumen(r)
-        st.text(f"Masa en kg: {m}, Densidad en kg/m^3: {rho}")
-        C = 0.65
+        
+        st.text(f"Masa en kg: {m}, Densidad en kg/m^3: {rho}, CArrastre: {C}")
+    
         x_max = 20000
 
     elif proyectil == 'Bombas volcánicas':

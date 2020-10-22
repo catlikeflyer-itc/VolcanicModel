@@ -1,4 +1,5 @@
 import streamlit as st
+from PIL import Image
 
 def cargar():
     st.header('Intrucciones de uso de la simulación')
@@ -28,3 +29,8 @@ Por Do Hyun Nam
 """
 
     st.text(cuerpo)
+
+    logo = Image.open('images/black.png')
+    st.image(logo, width=300)
+    
+    
